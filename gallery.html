@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery — EEE Club of HSTU</title>
+<meta name="description" content="Photos from EEE Club of HSTU workshops, competitions and field trips.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.mason{columns:3 300px;column-gap:16px}
+.mason figure{margin:0 0 16px;break-inside:avoid}
+.mason .art{cursor:zoom-in;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.mason .art:hover{transform:scale(1.015)}
+.mason button:focus-visible{outline:2px solid #D7FF3D !important;outline-offset:3px !important}
+.mason figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0}
+.lb{position:fixed;inset:0;z-index:120;background:rgba(8,9,11,.94);display:none;align-items:center;justify-content:center;padding:40px}
+.lb.open{display:flex}
+.lb .art{width:min(1000px,100%);aspect-ratio:16/10}
+</style>
+</head>
+<body data-section="content">
+<div id="site-header"></div>
+<main>
+
+<section class="page-hero wrap">
+<div class="crumb"><a href="index.html">Home</a>  /  Content  /  Gallery</div>
+<h1 class="h1">Captured in<br><span class="s">high voltage.</span></h1>
+<p class="lead">Workshops, field trips, late-night lab sessions and the occasional magic smoke. Click any tile to open it.</p>
+<div class="chips" data-filter="tag" style="margin-top:36px">
+<button class="chip" data-value="all" aria-pressed="true">All</button>
+<button class="chip" data-value="competition" aria-pressed="false">Competitions</button>
+<button class="chip" data-value="workshop" aria-pressed="false">Workshops</button>
+<button class="chip" data-value="trip" aria-pressed="false">Field trips</button>
+<button class="chip" data-value="people" aria-pressed="false">People</button>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:140px">
+<div class="mason">
+<figure data-tag="competition"><button class="art" style="all:unset;display:block;width:100%;height:420px;border-radius:20px;background:#D7FF3D;position:relative;overflow:hidden" aria-label="Open: Volt Rush finals"><svg viewBox="0 0 400 420" preserveAspectRatio="none" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><path d="M0 300 C 60 220, 120 220, 180 300 S 300 380, 400 280" stroke="#08090B" stroke-width="3" opacity=".3"/></svg></button><figcaption><span>Volt Rush finals</span><span class="m mu">Nov 2025</span></figcaption></figure>
+<figure data-tag="workshop"><button class="art" style="all:unset;display:block;width:100%;height:260px;border-radius:20px;background:#111317 repeating-linear-gradient(90deg,rgba(243,242,238,.05) 0 1px,transparent 1px 32px);position:relative;overflow:hidden" aria-label="Open: Soldering 101"><svg viewBox="0 0 400 260" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="200" cy="130" r="60" stroke="#4D6BFF" stroke-width="2"/></svg></button><figcaption><span>Soldering 101</span><span class="m mu">Feb 2026</span></figcaption></figure>
+<figure data-tag="trip"><button class="art" style="all:unset;display:block;width:100%;height:320px;border-radius:20px;background:#4D6BFF;position:relative;overflow:hidden" aria-label="Open: Substation visit"><svg viewBox="0 0 400 320" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><path d="M80 260 L200 60 L320 260 M120 200 H280 M150 150 H250" stroke="#F3F2EE" stroke-width="2"/></svg></button><figcaption><span>132 kV substation visit</span><span class="m mu">Sep 2026</span></figcaption></figure>
+<figure data-tag="people"><button class="art" style="all:unset;display:block;width:100%;height:300px;border-radius:20px;background:#181B21;position:relative;overflow:hidden" aria-label="Open: Orientation day"><svg viewBox="0 0 400 300" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="130" cy="150" r="40" stroke="#D7FF3D" stroke-width="2"/><circle cx="200" cy="150" r="40" stroke="#D7FF3D" stroke-width="2"/><circle cx="270" cy="150" r="40" stroke="#D7FF3D" stroke-width="2"/></svg></button><figcaption><span>Orientation day</span><span class="m mu">Dec 2025</span></figcaption></figure>
+<figure data-tag="competition"><button class="art" style="all:unset;display:block;width:100%;height:240px;border-radius:20px;background:#FF5A1F;position:relative;overflow:hidden" aria-label="Open: Sumo ring"><svg viewBox="0 0 400 240" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="200" cy="120" r="80" stroke="#08090B" stroke-width="4" opacity=".4"/></svg></button><figcaption><span>Robo sumo ring</span><span class="m mu">Nov 2025</span></figcaption></figure>
+<figure data-tag="workshop"><button class="art" style="all:unset;display:block;width:100%;height:380px;border-radius:20px;background:#111317;position:relative;overflow:hidden" aria-label="Open: PCB clinic"><svg viewBox="0 0 400 380" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><path d="M40 340 L40 180 L160 180 L160 80 L280 80 L280 220 L360 220 L360 340" stroke="#D7FF3D" stroke-width="2"/><circle cx="160" cy="80" r="8" fill="#D7FF3D"/><circle cx="280" cy="220" r="8" fill="#D7FF3D"/></svg></button><figcaption><span>PCB design clinic</span><span class="m mu">Apr 2026</span></figcaption></figure>
+<figure data-tag="trip"><button class="art" style="all:unset;display:block;width:100%;height:280px;border-radius:20px;background:#EDECE6;position:relative;overflow:hidden" aria-label="Open: Solar field"><svg viewBox="0 0 400 280" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><path d="M60 220 L120 120 L340 120 L280 220 Z M120 170 H310 M180 120 L150 220 M240 120 L215 220" stroke="#08090B" stroke-width="2" opacity=".5"/></svg></button><figcaption><span>Solar field, Rangpur</span><span class="m mu">Dec 2024</span></figcaption></figure>
+<figure data-tag="people"><button class="art" style="all:unset;display:block;width:100%;height:340px;border-radius:20px;background:#4D6BFF;position:relative;overflow:hidden" aria-label="Open: Award night"><svg viewBox="0 0 400 340" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><path d="M200 60 L225 130 L300 130 L240 175 L262 250 L200 205 L138 250 L160 175 L100 130 L175 130 Z" stroke="#F3F2EE" stroke-width="2"/></svg></button><figcaption><span>Award night</span><span class="m mu">Mar 2026</span></figcaption></figure>
+<figure data-tag="workshop"><button class="art" style="all:unset;display:block;width:100%;height:250px;border-radius:20px;background:#D7FF3D;position:relative;overflow:hidden" aria-label="Open: IoT lab"><svg viewBox="0 0 400 250" fill="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><path d="M200 140 m-20 0 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0 M150 100 a70 70 0 0 1 100 0 M120 70 a110 110 0 0 1 160 0" stroke="#08090B" stroke-width="3" opacity=".4"/></svg></button><figcaption><span>IoT lab night</span><span class="m mu">Aug 2025</span></figcaption></figure>
+</div>
+<p class="m mu" style="margin-top:20px;text-transform:none;letter-spacing:0">Demo gallery — illustrated tiles stand in for event photos.</p>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+<button id="lb-close" aria-label="Close" style="position:absolute;top:24px;right:24px;width:48px;height:48px;border-radius:999px;border:0;background:#F3F2EE;cursor:pointer;font-size:20px">✕</button>
+<figure style="margin:0;width:min(1000px,100%)"><div id="lb-art" class="art" style="aspect-ratio:16/10;border-radius:24px"></div><figcaption id="lb-cap" style="margin-top:16px;font-size:20px"></figcaption></figure>
+</div>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  var lb = document.getElementById('lb'), art = document.getElementById('lb-art'), cap = document.getElementById('lb-cap'), last;
+  document.querySelectorAll('.mason figure button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      last = b;
+      art.style.cssText = b.style.cssText + ';height:auto;aspect-ratio:16/10;position:relative;overflow:hidden;border-radius:24px';
+      art.innerHTML = b.innerHTML;
+      cap.textContent = b.parentNode.querySelector('figcaption').textContent.replace(/(\D)(\w{3} \d{4})$/, '$1 · $2');
+      lb.classList.add('open'); document.body.classList.add('lock');
+      document.getElementById('lb-close').focus();
+    });
+  });
+  function close() { lb.classList.remove('open'); document.body.classList.remove('lock'); if (last) last.focus(); }
+  document.getElementById('lb-close').addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+})();
+</script>
+</body>
+</html>

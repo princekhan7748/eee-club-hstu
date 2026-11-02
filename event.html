@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volt Rush 2026 — EEE Club of HSTU</title>
+<meta name="description" content="Volt Rush 2026, the EEE Club of HSTU's inter-university robotics sprint. 22 November 2026, Central Field, HSTU.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.vr{position:relative;overflow:hidden;border-radius:36px;background:#D7FF3D;color:#08090B;padding:48px;min-height:560px;display:flex;flex-direction:column;justify-content:space-between}
+.vr svg{position:absolute;inset:0;width:100%;height:100%}
+.vr h1{position:relative;margin:0;font-size:clamp(96px,17vw,280px);line-height:.8;font-weight:700;letter-spacing:-.06em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));border-top:1px solid #262A31}
+.facts div{padding:24px 24px 24px 0}
+.facts div+div{padding-left:24px;border-left:1px solid #262A31}
+.facts b{display:block;margin-top:8px;font-size:24px;font-weight:500}
+.sched{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid #262A31}
+.sched b{font-size:20px;font-weight:500}
+@media(max-width:760px){.vr{padding:28px;min-height:420px}}
+</style>
+</head>
+<body data-section="events">
+<div id="site-header"></div>
+<main>
+
+<section class="wrap" style="padding-top:32px">
+<div class="crumb"><a href="index.html">Home</a>  /  <a href="events.html">Events</a>  /  Volt Rush 2026</div>
+<div class="vr reveal" style="margin-top:28px">
+<svg viewBox="0 0 1280 560" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 420 C 140 300, 260 300, 400 420 S 660 540, 800 400 S 1080 260, 1280 330" stroke="#08090B" stroke-width="3" opacity=".22"/><path d="M0 470 C 200 380, 330 380, 520 470 S 860 560, 1040 450 S 1200 400, 1280 430" stroke="#08090B" stroke-width="1.5" opacity=".18"/></svg>
+<div style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px"><span class="m">Flagship · 9th edition</span><span class="m">22 Nov 2026 · Central Field, HSTU</span></div>
+<h1>VOLT<br>RUSH<span class="s" style="font-weight:400;letter-spacing:-.02em"> ’26</span></h1>
+</div>
+</section>
+
+<section class="wrap" style="padding-top:64px;padding-bottom:40px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:64px;align-items:start">
+<div>
+<div class="m v">Inter-university robotics sprint</div>
+<p style="margin:20px 0 0;font-size:clamp(26px,3vw,40px);line-height:1.15;font-weight:500;letter-spacing:-.02em">36 teams. 9 hours. A maze, a sumo ring and a line-follower track designed by our Robotics wing.</p>
+<p class="lead" style="margin-top:24px">Teams of two to four students from any university in Bangladesh. Bring your own robot — or build one at our pre-event workshop on 14 November.</p>
+<div class="facts" style="margin-top:40px">
+<div><span class="m mu">Date</span><b>Sun, 22 Nov</b></div>
+<div><span class="m mu">Time</span><b>09:00 – 18:00</b></div>
+<div><span class="m mu">Fee</span><b>৳ 1,200 / team</b></div>
+<div><span class="m mu">Prize pool</span><b>৳ 60,000</b></div>
+</div>
+</div>
+<form class="card reveal" id="reg" novalidate style="gap:18px">
+<span class="m v">Register your team</span>
+<div style="display:flex;justify-content:space-between"><span class="m mu">Seats filled</span><span class="m">148 / 200</span></div>
+<div style="height:6px;border-radius:9px;background:#181B21"><div style="width:74%;height:6px;border-radius:9px;background:#D7FF3D"></div></div>
+<div class="field"><label for="team">Team name</label><input id="team" required placeholder="Ohm My God"></div>
+<div class="field"><label for="uni">University</label><input id="uni" required placeholder="HSTU"></div>
+<div class="field"><label for="track">Track</label><select id="track"><option>Line follower</option><option>Robo sumo</option><option>Maze solver</option></select></div>
+<div class="field"><label for="cap">Captain’s email</label><input id="cap" type="email" required placeholder="captain@example.com"></div>
+<button class="btn" type="submit" style="justify-content:space-between">Register team</button>
+<p class="m" id="reg-msg" role="status" style="margin:0;min-height:16px"></p>
+</form>
+</div>
+</section>
+
+<section class="wrap" style="padding-top:80px;padding-bottom:80px">
+<div class="head"><div><div class="m v">(01) — Tracks</div><h2 class="h2">Pick your <span class="s">battlefield.</span></h2></div></div>
+<div class="grid reveal" style="--min:300px;margin-top:56px">
+<div class="card"><span class="m mu">Track A</span><div class="h3">Line follower</div><p>A 40-metre track with gaps, crossings and a hairpin. Fastest clean lap wins.</p><span class="m v">1st ৳ 12,000</span></div>
+<div class="card volt"><span class="m">Track B</span><div class="h3">Robo sumo</div><p>3 kg class, 154 cm dohyo, best of three. Push them out before they push you.</p><span class="m">1st ৳ 12,000</span></div>
+<div class="card"><span class="m mu">Track C</span><div class="h3">Maze solver</div><p>A 16×16 micromouse-style maze, revealed on the day. Map it, then run it.</p><span class="m v">1st ৳ 12,000</span></div>
+</div>
+</section>
+
+<section class="alt sec">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:64px">
+<div><div class="m v">(02) — Schedule</div><h2 class="h2">The day, <span class="s">hour by hour.</span></h2></div>
+<div style="border-top:1px solid #262A31">
+<div class="sched"><span class="m mu">08:00</span><b>Check-in &amp; robot inspection</b></div>
+<div class="sched"><span class="m mu">09:00</span><b>Opening ceremony</b></div>
+<div class="sched"><span class="m mu">09:30</span><b>Qualifying rounds — all tracks</b></div>
+<div class="sched"><span class="m mu">13:00</span><b>Lunch &amp; pit-stop repairs</b></div>
+<div class="sched"><span class="m mu">14:00</span><b>Knockouts &amp; semi-finals</b></div>
+<div class="sched"><span class="m mu">16:30</span><b>Finals</b></div>
+<div class="sched"><span class="m mu">17:30</span><b>Awards &amp; closing</b></div>
+</div>
+</div>
+</section>
+
+<section class="wrap sec">
+<div class="m v">(03) — FAQ</div>
+<div style="margin-top:28px;border-top:1px solid #262A31">
+<details class="acc"><summary>Can first-year students take part?</summary><div class="body">Yes. Every track has a rookie prize for teams where all members are in Level 1 or Level 2.</div></details>
+<details class="acc"><summary>Do we need to bring our own robot?</summary><div class="body">Yes, but if you don’t have one, join the Embedded Bootcamp on 14 November — every team leaves with a working line-follower.</div></details>
+<details class="acc"><summary>Is accommodation provided?</summary><div class="body">Teams travelling from outside Dinajpur can request a shared dormitory spot when registering, subject to availability.</div></details>
+</div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+document.getElementById('reg').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target, msg = document.getElementById('reg-msg');
+  var ok = f.team.value.trim() && f.uni.value.trim() && /.+@.+\..+/.test(f.cap.value);
+  msg.style.color = ok ? '#D7FF3D' : '#FF5A1F';
+  msg.textContent = ok ? 'Registered! Confirmation sent to ' + f.cap.value + ' (demo).' : 'Please fill in every field with a valid email.';
+  if (ok) f.reset();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upcoming Events — EEE Club of HSTU</title>
+<meta name="description" content="Workshops, seminars and competitions coming up at the EEE Club of HSTU.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.ev{display:flex;flex-wrap:wrap;align-items:center;gap:32px;padding:32px 0;color:#F3F2EE;text-decoration:none;border-radius:20px}
+.ev .d{width:150px}.ev .d b{display:block;font-size:72px;font-weight:500;letter-spacing:-.04em;line-height:1}
+.ev .t{flex:1 1 360px}.ev .t b{display:block;font-size:30px;font-weight:500;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.ev .where{width:220px;line-height:1.6}
+.cd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.cd div{padding:16px 0;border-radius:16px;background:#181B21;text-align:center}
+.cd b{display:block;font-size:48px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.cd div:last-child{background:#D7FF3D;color:#08090B}
+</style>
+</head>
+<body data-section="events">
+<div id="site-header"></div>
+<main>
+
+<section class="page-hero wrap">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px;align-items:flex-end">
+<div>
+<div class="crumb"><a href="index.html">Home</a>  /  Events  /  Upcoming</div>
+<h1 class="h1">Events<br><span class="s">&amp; happenings.</span></h1>
+</div>
+<div class="card reveal" style="flex:0 1 480px">
+<div style="display:flex;align-items:center;gap:10px"><span class="blink" style="width:8px;height:8px;border-radius:9px;background:#FF5A1F"></span><span class="m mu">Next event starts in</span></div>
+<div class="cd" data-countdown="2026-11-14T10:00:00+06:00">
+<div><b data-unit="d">00</b><span class="m mu" style="font-size:10px">Days</span></div>
+<div><b data-unit="h">00</b><span class="m mu" style="font-size:10px">Hrs</span></div>
+<div><b data-unit="m">00</b><span class="m mu" style="font-size:10px">Min</span></div>
+<div><b data-unit="s">00</b><span class="m" style="font-size:10px">Sec</span></div>
+</div>
+<div style="font-size:22px;font-weight:500">Arduino to ARM: Embedded Bootcamp</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn sm" href="join.html">Register</a><a class="btn ghost sm" href="#list">All events</a></div>
+</div>
+</div>
+</section>
+
+<div style="border-top:1px solid #262A31;border-bottom:1px solid #262A31">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px">
+<div class="chips" data-filter="type" aria-label="Filter events">
+<button class="chip" data-value="all" aria-pressed="true">All</button>
+<button class="chip" data-value="workshop" aria-pressed="false">Workshop</button>
+<button class="chip" data-value="competition" aria-pressed="false">Competition</button>
+<button class="chip" data-value="seminar" aria-pressed="false">Seminar</button>
+<button class="chip" data-value="trip" aria-pressed="false">Field trip</button>
+</div>
+<div style="display:flex;gap:10px"><a class="chip plain" href="archive.html">Archive →</a><a class="chip plain" href="notices.html">Notices →</a></div>
+</div>
+</div>
+
+<section class="wrap" id="list" style="padding-top:72px;padding-bottom:140px">
+<div class="head"><div class="h3">November — January</div><span class="m mu">6 upcoming</span></div>
+<div class="list" style="margin-top:28px">
+<a href="event.html" class="ev row" data-type="workshop"><span class="d"><b>14</b><span class="m mu">Nov · Sat</span></span><span class="t"><b>Arduino to ARM: Embedded Bootcamp</b><span class="chip">Workshop</span></span><span class="m mu where hide-sm">Room 310, EEE Building<br>10:00 — 16:00</span><span class="arrow" style="width:64px;height:64px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+<a href="event.html" class="ev row" data-type="competition"><span class="d"><b>22</b><span class="m mu">Nov · Sun</span></span><span class="t"><b>Volt Rush 2026 — Inter-University Robotics Sprint</b><span class="chip on">Competition</span></span><span class="m mu where hide-sm">Central Field, HSTU<br>09:00 — 18:00</span><span class="arrow" style="width:64px;height:64px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+<a href="event.html" class="ev row" data-type="seminar"><span class="d"><b>03</b><span class="m mu">Dec · Thu</span></span><span class="t"><b>Grid of Tomorrow: Talk with Power Sector Engineers</b><span class="chip">Seminar</span></span><span class="m mu where hide-sm">TSC Auditorium<br>15:00 — 17:00</span><span class="arrow" style="width:64px;height:64px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+<a href="event.html" class="ev row" data-type="workshop"><span class="d"><b>18</b><span class="m mu">Dec · Fri</span></span><span class="t"><b>PCB Design Clinic with KiCad 9</b><span class="chip">Workshop</span></span><span class="m mu where hide-sm">EEE Lab 2<br>14:00 — 17:00</span><span class="arrow" style="width:64px;height:64px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+<a href="event.html" class="ev row" data-type="trip"><span class="d"><b>27</b><span class="m mu">Dec · Sun</span></span><span class="t"><b>Field Trip: Barapukuria Power Station</b><span class="chip">Field trip</span></span><span class="m mu where hide-sm">Departs Main Gate<br>07:00</span><span class="arrow" style="width:64px;height:64px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+<a href="event.html" class="ev row" data-type="seminar"><span class="d"><b>10</b><span class="m mu">Jan · Sun</span></span><span class="t"><b>Writing Your First IEEE Paper — Research Clinic</b><span class="chip">Seminar</span></span><span class="m mu where hide-sm">Seminar Room 2<br>11:00 — 13:00</span><span class="arrow" style="width:64px;height:64px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+</div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

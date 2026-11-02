@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources — EEE Club of HSTU</title>
+<meta name="description" content="Lecture notes, lab manuals, datasheets and code shared by EEE Club members.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.tbl{border:1px solid #262A31;border-radius:24px;overflow:hidden}
+.tr{display:grid;grid-template-columns:minmax(0,1fr) 130px 130px 90px 56px;gap:20px;align-items:center;padding:20px 28px;border-top:1px solid #262A31;transition:background .2s}
+.tr:first-child{border-top:0}
+.tr.h{background:#111317}
+.tr:not(.h):hover{background:#111317}
+.tr b{font-size:18px;font-weight:500}
+.dl{width:48px;height:48px;border-radius:999px;border:1px solid #3A3F48;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s}
+.tr:hover .dl{background:#D7FF3D;border-color:#D7FF3D}
+.tr:hover .dl svg{stroke:#08090B}
+@media(max-width:760px){.tr{grid-template-columns:1fr 56px}.tr .c2,.tr .c3,.tr .c4{display:none}}
+</style>
+</head>
+<body data-section="content">
+<div id="site-header"></div>
+<main>
+
+<section class="page-hero wrap">
+<div class="crumb"><a href="index.html">Home</a>  /  Content  /  Resources</div>
+<h1 class="h1">Open-source<br><span class="s">your semester.</span></h1>
+<p class="lead">Notes, lab manuals, question banks and starter code — shared by members, checked by the Research &amp; Career wing.</p>
+<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-top:40px">
+<div class="chips" data-filter="kind">
+<button class="chip" data-value="all" aria-pressed="true">All</button>
+<button class="chip" data-value="notes" aria-pressed="false">Notes</button>
+<button class="chip" data-value="lab" aria-pressed="false">Lab manuals</button>
+<button class="chip" data-value="code" aria-pressed="false">Code</button>
+<button class="chip" data-value="exam" aria-pressed="false">Question banks</button>
+</div>
+<label class="field" style="flex:0 1 380px"><span class="lbl">Search 240 files</span><input type="search" data-search=".tr:not(.h)" placeholder="Course code, topic, tool…"></label>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:140px">
+<div class="tbl reveal">
+<div class="tr h"><span class="m mu">Title</span><span class="m mu c2">Type</span><span class="m mu c3">Course</span><span class="m mu c4">Size</span><span></span></div>
+<a href="#" class="tr" data-kind="notes" style="color:#F3F2EE;text-decoration:none"><b>Circuit Analysis II — complete lecture notes</b><span class="c2"><span class="chip plain">PDF</span></span><span class="m mu c3">EEE 2101</span><span class="m mu c4">14 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="code" style="color:#F3F2EE;text-decoration:none"><b>STM32F4 starter kit &amp; peripheral cheatsheet</b><span class="c2"><span class="chip plain">ZIP</span></span><span class="m mu c3">EEE 3203</span><span class="m mu c4">2 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="lab" style="color:#F3F2EE;text-decoration:none"><b>Power Systems I lab manual (annotated)</b><span class="c2"><span class="chip plain">PDF</span></span><span class="m mu c3">EEE 3105</span><span class="m mu c4">8 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="exam" style="color:#F3F2EE;text-decoration:none"><b>Question bank — Level 2 Semester 1 (2019–2025)</b><span class="c2"><span class="chip plain">PDF</span></span><span class="m mu c3">All</span><span class="m mu c4">22 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="notes" style="color:#F3F2EE;text-decoration:none"><b>Electromagnetic Fields — solved problems</b><span class="c2"><span class="chip plain">PDF</span></span><span class="m mu c3">EEE 2203</span><span class="m mu c4">11 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="code" style="color:#F3F2EE;text-decoration:none"><b>MATLAB scripts for Signals &amp; Systems labs</b><span class="c2"><span class="chip plain">ZIP</span></span><span class="m mu c3">EEE 2207</span><span class="m mu c4">640 KB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="lab" style="color:#F3F2EE;text-decoration:none"><b>Electronics I lab manual with LTspice files</b><span class="c2"><span class="chip plain">ZIP</span></span><span class="m mu c3">EEE 2102</span><span class="m mu c4">5 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="code" style="color:#F3F2EE;text-decoration:none"><b>KiCad footprint library — club edition</b><span class="c2"><span class="chip plain">ZIP</span></span><span class="m mu c3">Workshop</span><span class="m mu c4">36 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="exam" style="color:#F3F2EE;text-decoration:none"><b>Question bank — Level 3 Semester 2 (2019–2025)</b><span class="c2"><span class="chip plain">PDF</span></span><span class="m mu c3">All</span><span class="m mu c4">19 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+<a href="#" class="tr" data-kind="notes" style="color:#F3F2EE;text-decoration:none"><b>Control Systems — Bode &amp; root-locus crash course</b><span class="c2"><span class="chip plain">PDF</span></span><span class="m mu c3">EEE 3201</span><span class="m mu c4">6 MB</span><span class="dl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></span></a>
+</div>
+<p class="m mu" style="margin-top:20px;text-transform:none;letter-spacing:0">Demo listing — download links are placeholders.</p>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

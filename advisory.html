@@ -12,28 +12,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body id="top">
+<body id="top" data-section="about">
 <div style="width: 100%; overflow-x: hidden">
 
-<header class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px">
-<a href="index.html" class="logo">
-<img src="assets/logo.png" alt="EEE Club of HSTU logo" width="48" height="48">
-<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 500">EEE Club</span><span class="m" style="font-size: 10px; color: #8A8F98">HSTU · Dinajpur</span></span>
-</a>
-<nav class="links" aria-label="Main" style="display: flex; gap: 4px; padding: 6px; border-radius: 999px; background: #111317; border: 1px solid #262A31">
-<a class="navlink" href="index.html">Home</a>
-<a class="navlink on" href="advisory.html" aria-current="page">About</a>
-<a class="navlink" href="index.html#events">Events</a>
-<a class="navlink" href="index.html#stories">Content</a>
-<a class="navlink" href="index.html#verify">Verify</a>
-<a class="navlink" href="index.html#contact">Contact</a>
-</nav>
-<a href="index.html#join" style="display: flex; align-items: center; gap: 14px; padding: 6px 6px 6px 22px; border-radius: 999px; background: #D7FF3D; color: #08090B; font-size: 15px; font-weight: 500; text-decoration: none">Join us<span style="width: 40px; height: 40px; border-radius: 999px; background: #08090B; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D7FF3D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span></a>
-</header>
+<div id="site-header"></div>
 
 <section class="wrap" style="position: relative; padding-top: 72px; padding-bottom: 96px">
 <svg width="560" height="560" viewBox="0 0 560 560" fill="none" aria-hidden="true" class="hide-sm" style="position: absolute; right: -60px; top: -40px"><circle cx="280" cy="280" r="80" stroke="#F3F2EE" stroke-opacity="0.07"></circle><circle cx="280" cy="280" r="150" stroke="#F3F2EE" stroke-opacity="0.07"></circle><circle cx="280" cy="280" r="215" stroke="#D7FF3D" stroke-width="1.5"></circle><circle cx="280" cy="280" r="275" stroke="#F3F2EE" stroke-opacity="0.07"></circle></svg>
-<div class="m" style="position: relative; color: #8A8F98"><a href="index.html" style="color: #8A8F98; text-decoration: none">Home</a>  /  About  /  Advisory panel</div>
+<div class="crumb"><a href="index.html">Home</a>  /  <a href="about.html">About</a>  /  Advisory panel</div>
 <h1 style="position: relative; margin: 32px 0 0; font-size: clamp(64px, 10vw, 160px); line-height: 0.88; font-weight: 700; letter-spacing: -0.045em">Advisory<br><span class="s" style="font-weight: 400; color: #D7FF3D">panel.</span></h1>
 <p style="position: relative; margin: 36px 0 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: #B9BDC4">Our advisors from the Department of Electrical &amp; Electronic Engineering guide the club’s projects, competitions and research — and keep our ambitions grounded in good engineering.</p>
 </section>
@@ -74,11 +60,9 @@
 </div>
 </section>
 
-<footer class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 32px; padding-bottom: 32px">
-<a href="index.html" class="logo"><img src="assets/logo.png" alt="" width="48" height="48"><span class="m" style="color: #8A8F98">© 2026 EEE Club of HSTU</span></a>
-<a href="index.html#join" class="m">Join the club →</a>
-</footer>
+<div id="site-footer"></div>
 
 </div>
+<script src="assets/site.js"></script>
 </body>
 </html>

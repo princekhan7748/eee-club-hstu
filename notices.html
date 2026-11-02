@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notices — EEE Club of HSTU</title>
+<meta name="description" content="Announcements, deadlines and notices from the EEE Club of HSTU.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.nt{display:grid;grid-template-columns:140px 1fr auto;gap:32px;align-items:center;padding:28px 0}
+.nt b{display:block;font-size:22px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.nt p{margin:8px 0 0;color:#8A8F98;line-height:1.55}
+@media(max-width:760px){.nt{grid-template-columns:1fr;gap:10px}}
+</style>
+</head>
+<body data-section="events">
+<div id="site-header"></div>
+<main>
+
+<section class="page-hero wrap">
+<div class="crumb"><a href="index.html">Home</a>  /  <a href="events.html">Events</a>  /  Notices</div>
+<h1 class="h1">Notice<br><span class="s">board.</span></h1>
+<p class="lead">Deadlines, schedule changes and announcements. Pinned notices stay at the top until they expire.</p>
+<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px">
+<div class="chips" data-filter="cat">
+<button class="chip" data-value="all" aria-pressed="true">All</button>
+<button class="chip" data-value="membership" aria-pressed="false">Membership</button>
+<button class="chip" data-value="events" aria-pressed="false">Events</button>
+<button class="chip" data-value="lab" aria-pressed="false">Lab</button>
+<button class="chip" data-value="publication" aria-pressed="false">Publication</button>
+</div>
+<label style="flex:0 1 340px" class="field"><span class="lbl">Search notices</span><input type="search" data-search=".nt" placeholder="e.g. deadline"></label>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:140px">
+<div class="list">
+<div class="nt reveal" data-cat="membership"><span class="m mu">02 Nov 2026</span><div><span class="chip on" style="margin-bottom:12px">Pinned</span><b>Membership drive 2026/27 — apply before 30 November</b><p>New and returning members must register online. Orientation is on 5 December in the TSC Auditorium.</p></div><a class="chip plain" href="join.html">Apply →</a></div>
+<div class="nt reveal" data-cat="events"><span class="m mu">31 Oct 2026</span><div><span class="chip" style="margin-bottom:12px">New</span><b>Volt Rush registration deadline extended to 15 November</b><p>Twelve more team slots have opened after the field layout was expanded.</p></div><a class="chip plain" href="event.html">Details →</a></div>
+<div class="nt reveal" data-cat="lab"><span class="m mu">24 Oct 2026</span><div><b>Maker space hours for the odd semester</b><p>Sunday to Thursday, 14:00 – 19:00. Soldering stations require a completed safety briefing.</p></div><span class="m mu">Lab</span></div>
+<div class="nt reveal" data-cat="publication"><span class="m mu">18 Oct 2026</span><div><b>Call for writers — Pulse Issue 08</b><p>Pitch a 600–1,200 word piece on anything electrical. Deadline 20 November.</p></div><a class="chip plain" href="magazine.html">Pulse →</a></div>
+<div class="nt reveal" data-cat="membership"><span class="m mu">12 Oct 2026</span><div><b>AGM minutes and election results published</b><p>The 2026–27 Executive Committee takes office on 1 November.</p></div><a class="chip plain" href="leadership.html">Committee →</a></div>
+<div class="nt reveal" data-cat="events"><span class="m mu">05 Oct 2026</span><div><b>Embedded Bootcamp: 60 seats, first come first served</b><p>Kits are provided. Bring a laptop with the Arduino IDE and STM32CubeIDE installed.</p></div><a class="chip plain" href="events.html">Events →</a></div>
+<div class="nt reveal" data-cat="lab"><span class="m mu">28 Sep 2026</span><div><b>New oscilloscopes and a reflow oven in Lab 2</b><p>Thanks to alumni donations, the lab now has four 100 MHz scopes and a reflow oven for SMD work.</p></div><span class="m mu">Lab</span></div>
+</div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

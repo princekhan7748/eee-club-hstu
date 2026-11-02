@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify — EEE Club of HSTU</title>
+<meta name="description" content="Verify an EEE Club of HSTU certificate or membership.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.vbox{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 28px;border-radius:999px;background:#111317;border:1.5px solid #262A31;transition:border-color .2s}
+.vbox:focus-within{border-color:#D7FF3D}
+.vbox input{flex:1;min-width:0;background:transparent;border:0;outline:none;color:#F3F2EE;font-family:'JetBrains Mono',monospace;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;text-transform:uppercase}
+.res{margin-top:32px;border-radius:32px;padding:36px;display:none}
+.res.ok{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:#EDECE6;color:#08090B}
+.res.bad{display:block;background:#111317;border:1px solid #FF5A1F}
+.seal{width:130px;height:130px;border-radius:999px;background:#D7FF3D;border:2px dashed #08090B;display:flex;align-items:center;justify-content:center}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:18px}
+.kv div{padding:12px 16px 12px 0;border-top:1px solid rgba(8,9,11,.2)}
+.kv b{display:block;margin-top:4px;font-size:17px;font-weight:500}
+@media(max-width:640px){.res.ok{grid-template-columns:1fr}.res{padding:24px}}
+</style>
+</head>
+<body data-section="verify">
+<div id="site-header"></div>
+<main>
+
+<section class="page-hero wrap" style="text-align:center">
+<div class="crumb" style="text-align:left"><a href="index.html">Home</a>  /  Verify</div>
+<h1 class="h1" style="margin-left:auto;margin-right:auto">Verify a<br><span class="s">credential.</span></h1>
+<div class="tabs" data-tabs="verify" role="tablist" aria-label="What to verify" style="margin-top:40px">
+<button class="tab" role="tab" data-panel="certificate">Certificate</button>
+<button class="tab" role="tab" data-panel="membership">Membership</button>
+</div>
+</section>
+
+<section class="wrap" style="max-width:1000px;padding-bottom:120px">
+<div data-group="verify" data-panel-id="certificate">
+<form class="vform" data-kind="cert" novalidate>
+<label for="cert-id" class="m v">Certificate ID</label>
+<div class="vbox" style="margin-top:10px"><input id="cert-id" autocomplete="off" placeholder="EEE-HSTU-2026-0417"><button class="btn" type="submit">Verify</button></div>
+</form>
+<div class="chips" style="margin-top:16px;justify-content:center"><span class="m mu" style="align-self:center">Try a demo ID:</span><button class="chip plain try" data-target="cert-id">EEE-HSTU-2026-0417</button><button class="chip plain try" data-target="cert-id">EEE-HSTU-2025-0132</button><button class="chip plain try" data-target="cert-id">EEE-HSTU-2024-9999</button></div>
+</div>
+<div data-group="verify" data-panel-id="membership" hidden>
+<form class="vform" data-kind="member" novalidate>
+<label for="mem-id" class="m v">Member ID</label>
+<div class="vbox" style="margin-top:10px"><input id="mem-id" autocomplete="off" placeholder="M-2026-0088"><button class="btn" type="submit">Verify</button></div>
+</form>
+<div class="chips" style="margin-top:16px;justify-content:center"><span class="m mu" style="align-self:center">Try a demo ID:</span><button class="chip plain try" data-target="mem-id">M-2026-0088</button><button class="chip plain try" data-target="mem-id">M-2025-0412</button></div>
+</div>
+<div class="res" id="res" role="status" aria-live="polite"></div>
+</section>
+
+<section class="alt sec">
+<div class="wrap grid" style="--min:280px">
+<div class="card"><span class="m v">01</span><div class="h3">Tamper-proof IDs</div><p>Every certificate carries a unique ID and a QR code that links back to this page.</p></div>
+<div class="card"><span class="m v">02</span><div class="h3">Instant lookup</div><p>No login required. Recruiters and universities can check a credential in seconds.</p></div>
+<div class="card"><span class="m v">03</span><div class="h3">Something wrong?</div><p>If a record looks incorrect, <a href="contact.html">contact the General Secretary</a> with your ID.</p></div>
+</div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  // demo records — a real site would query a database here
+  var DB = {
+    'EEE-HSTU-2026-0417': { type: 'Certificate of Achievement', name: 'Nusrat Jahan Mim', for: 'Champion — Volt Rush 2026, Line follower', date: '22 Nov 2026' },
+    'EEE-HSTU-2025-0132': { type: 'Certificate of Participation', name: 'Imran Hossain', for: 'IoT Hackathon: Smart Campus', date: '16 Aug 2025' },
+    'M-2026-0088': { type: 'Active membership', name: 'Sabbir Hossain', for: 'Wings: Robotics, Embedded & IoT', date: 'Valid until 31 Oct 2027' },
+    'M-2025-0412': { type: 'Expired membership', name: 'Farhan Kabir', for: 'Wing: Power & Energy', date: 'Expired 31 Oct 2026' }
+  };
+  var res = document.getElementById('res');
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function show(id) {
+    id = id.trim().toUpperCase();
+    var r = DB[id];
+    if (!id) { res.className = 'res bad'; res.innerHTML = '<span class="m" style="color:#FF5A1F">Enter an ID to check.</span>'; return; }
+    if (!r) {
+      res.className = 'res bad';
+      res.innerHTML = '<span class="m" style="color:#FF5A1F">No record found</span><div class="h3" style="margin-top:12px">We couldn’t find <span style="font-family:JetBrains Mono,monospace">' + esc(id) + '</span>.</div><p class="mu" style="margin:10px 0 0">Check the ID for typos, or contact the club if you think this is a mistake.</p>';
+      return;
+    }
+    var expired = /Expired/.test(r.type);
+    res.className = 'res ok';
+    res.innerHTML = '<div class="seal" style="' + (expired ? 'background:#EDECE6' : '') + '"><svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#08090B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (expired ? '<path d="M12 7v6M12 17h.01"/>' : '<path d="M5 12.5l4.5 4.5L19 7.5"/>') + '</svg></div>' +
+      '<div><span class="m">' + (expired ? 'Found · no longer active' : 'Authentic · issued by EEE Club of HSTU') + '</span>' +
+      '<div class="s" style="margin-top:10px;font-size:clamp(32px,4vw,48px);line-height:1">' + esc(r.type) + '</div>' +
+      '<div class="kv"><div><span class="m" style="font-size:10px">Name</span><b>' + esc(r.name) + '</b></div><div><span class="m" style="font-size:10px">Details</span><b>' + esc(r['for']) + '</b></div><div><span class="m" style="font-size:10px">Date</span><b>' + esc(r.date) + '</b></div></div>' +
+      '<div class="m" style="margin-top:16px">ID · ' + esc(id) + '</div></div>';
+  }
+  document.querySelectorAll('.vform').forEach(function (f) {
+    f.addEventListener('submit', function (e) { e.preventDefault(); show(f.querySelector('input').value); });
+  });
+  document.querySelectorAll('.try').forEach(function (b) {
+    b.addEventListener('click', function () { var i = document.getElementById(b.getAttribute('data-target')); i.value = b.textContent; show(b.textContent); });
+  });
+  document.querySelectorAll('[data-tabs=verify] .tab').forEach(function (t) { t.addEventListener('click', function () { res.className = 'res'; }); });
+})();
+</script>
+</body>
+</html>

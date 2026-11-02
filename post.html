@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing Your First Bare-Metal STM32 Driver — EEE Club of HSTU</title>
+<meta name="description" content="A beginner's guide to blinking an LED on STM32 by writing to registers directly, without the HAL.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.bar{position:fixed;left:0;top:0;height:3px;width:0;background:#D7FF3D;z-index:60}
+</style>
+</head>
+<body data-section="content">
+<div class="bar" id="bar" aria-hidden="true"></div>
+<div id="site-header"></div>
+<main>
+
+<article>
+<header class="page-hero wrap" style="padding-bottom:56px">
+<div class="crumb"><a href="index.html">Home</a>  /  <a href="blog.html">Blog</a>  /  Tutorial</div>
+<h1 class="h1" style="font-size:clamp(48px,7vw,112px);max-width:1100px">Your first bare-metal driver for STM32 — <span class="s">no HAL, no fear.</span></h1>
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-top:36px">
+<div style="display:flex;align-items:center;gap:12px"><span class="av" style="width:48px;height:48px;aspect-ratio:auto;border-radius:99px;font-size:20px">AM</span><span><span style="display:block">Arif Mahmud</span><span class="m mu">Head · Robotics</span></span></div>
+<span class="m mu">28 Oct 2026</span><span class="m mu">12 min read</span><span class="chip">Embedded &amp; IoT</span>
+</div>
+</header>
+
+<div class="wrap"><div class="art" style="aspect-ratio:21/8;background-color:#4D6BFF"><svg viewBox="0 0 1260 480" fill="none" aria-hidden="true"><rect x="500" y="110" width="260" height="260" rx="14" stroke="#F3F2EE" stroke-width="3"/><rect x="565" y="175" width="130" height="130" stroke="#D7FF3D" stroke-width="3"/><path d="M540 70v40M600 70v40M660 70v40M720 70v40M540 370v40M600 370v40M660 370v40M720 370v40M460 150h40M460 210h40M460 270h40M460 330h40M760 150h40M760 210h40M760 270h40M760 330h40" stroke="#F3F2EE" stroke-width="3"/><path d="M0 410 C 200 350, 360 350, 460 300" stroke="#D7FF3D" stroke-width="2" opacity=".6"/></svg></div></div>
+
+<div class="wrap" style="padding-top:72px;padding-bottom:120px">
+<div class="prose" style="margin:0 auto">
+<p>Most of us meet microcontrollers through a library: call <code>HAL_GPIO_TogglePin()</code>, watch an LED blink, move on. It works — until something doesn’t, and you realise you have no idea what that function actually did. This tutorial strips the library away. By the end you’ll blink an LED on an STM32F4 by writing to the chip’s registers yourself.</p>
+
+<h2>1. Every peripheral is just memory</h2>
+<p>On an ARM Cortex-M chip, peripherals like GPIO ports live at fixed memory addresses. Writing a value to one of those addresses doesn’t store data — it flips real hardware. The reference manual (RM0090 for the F4 family) lists every one of them. GPIO port A starts at <code>0x40020000</code>; its output data register sits <code>0x14</code> bytes later.</p>
+
+<h2>2. Turn the clock on first</h2>
+<p>Peripherals are switched off at reset to save power. Before GPIOA will respond, you enable its clock in the RCC (reset and clock control) block. Forgetting this step is the single most common reason a first bare-metal program “does nothing”.</p>
+<pre>#define RCC_AHB1ENR  (*(volatile unsigned int *)0x40023830)
+#define GPIOA_MODER  (*(volatile unsigned int *)0x40020000)
+#define GPIOA_ODR    (*(volatile unsigned int *)0x40020014)
+
+RCC_AHB1ENR |= (1 &lt;&lt; 0);        // enable GPIOA clock</pre>
+
+<h2>3. Make the pin an output</h2>
+<p>Each pin gets two bits in <code>MODER</code>. <code>01</code> means general-purpose output. The on-board LED of a Nucleo-F401 is on PA5, so we clear bits 11:10 and set bit 10.</p>
+<pre>GPIOA_MODER &amp;= ~(3u &lt;&lt; (5 * 2));
+GPIOA_MODER |=  (1u &lt;&lt; (5 * 2));</pre>
+
+<h2>4. Blink</h2>
+<p>Toggling bit 5 of the output data register turns the LED on and off. A crude busy-wait loop is enough for now — we’ll replace it with the SysTick timer next week.</p>
+<pre>while (1) {
+    GPIOA_ODR ^= (1u &lt;&lt; 5);
+    for (volatile int i = 0; i &lt; 400000; i++) { }
+}</pre>
+<blockquote>The HAL isn’t magic. It’s these same three register writes, wrapped in a lot of good manners.</blockquote>
+
+<h2>Why bother?</h2>
+<p>Because the next time an interrupt doesn’t fire or a UART prints garbage, you’ll know where to look. Bare-metal knowledge is what lets you debug the abstractions instead of being stuck behind them. Bring your Nucleo board to the <a href="events.html">Embedded Bootcamp on 14 November</a> and we’ll go further: timers, interrupts and a UART driver.</p>
+</div>
+
+<div class="prose" style="margin:72px auto 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:28px;border-top:1px solid #262A31">
+<a class="btn ghost" href="blog.html">More posts</a>
+<a class="btn" href="join.html">Join the Embedded wing</a>
+</div>
+</div>
+</article>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  var bar = document.getElementById('bar');
+  function upd() { var h = document.documentElement; bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%'; }
+  window.addEventListener('scroll', upd, { passive: true }); upd();
+})();
+</script>
+</body>
+</html>

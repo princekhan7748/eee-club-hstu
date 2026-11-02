@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join — EEE Club of HSTU</title>
+<meta name="description" content="Apply for EEE Club of HSTU membership for the 2026/27 session.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.plug{background:#D7FF3D;color:#08090B}
+.plug .crumb,.plug .crumb a{color:#2A2E12}
+.plug header.site .logo,.plug header.site .logo .m{color:#08090B !important}
+.plug .menu-btn{border-color:rgba(8,9,11,.4)}
+.plug .menu-btn path{stroke:#08090B}
+.done{display:none;text-align:center;padding:64px 24px}
+.done.show{display:block}
+</style>
+</head>
+<body data-section="join">
+<div class="plug">
+<div id="site-header"></div>
+<section class="page-hero wrap" style="padding-bottom:72px">
+<div class="crumb"><a href="index.html">Home</a>  /  Join</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:48px">
+<h1 class="h1" style="font-size:clamp(110px,18vw,280px);line-height:.8">Plug <span class="s" style="color:#08090B">in.</span></h1>
+<div style="flex:0 1 420px">
+<div class="m">Membership 2026/27 · Closes 30 Nov</div>
+<p style="margin:14px 0 0;font-size:19px;line-height:1.55;color:#2A2E12">Two minutes to apply. ৳300 per session covers lab consumables, your welcome kit and discounted event entry.</p>
+</div>
+</div>
+</section>
+</div>
+<main>
+
+<section class="wrap" style="padding-top:96px;padding-bottom:140px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:64px;align-items:start">
+<div class="list">
+<div style="display:flex;gap:24px;padding:24px 0"><span class="m v">01</span><span><span style="display:block;font-size:24px;font-weight:500">Apply online</span><span class="mu" style="display:block;margin-top:6px">Fill in the form. Tell us which wings excite you.</span></span></div>
+<div style="display:flex;gap:24px;padding:24px 0"><span class="m v">02</span><span><span style="display:block;font-size:24px;font-weight:500">Orientation · 5 Dec</span><span class="mu" style="display:block;margin-top:6px">Meet your wing, mentors and the lab crew.</span></span></div>
+<div style="display:flex;gap:24px;padding:24px 0"><span class="m v">03</span><span><span style="display:block;font-size:24px;font-weight:500">Ship something</span><span class="mu" style="display:block;margin-top:6px">Your first project goes live within 30 days.</span></span></div>
+</div>
+
+<div class="card" style="padding:40px">
+<form id="jform" novalidate style="display:flex;flex-direction:column;gap:22px">
+<div class="h3" style="font-size:36px">Membership application</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+<div class="field"><label for="j-name">Full name</label><input id="j-name" required placeholder="Your name"></div>
+<div class="field"><label for="j-id">Student ID</label><input id="j-id" required placeholder="2002xxxx"></div>
+<div class="field"><label for="j-level">Level &amp; semester</label><select id="j-level"><option>Level 1 · Semester 1</option><option>Level 1 · Semester 2</option><option>Level 2 · Semester 1</option><option>Level 2 · Semester 2</option><option>Level 3 · Semester 1</option><option>Level 3 · Semester 2</option><option>Level 4 · Semester 1</option><option>Level 4 · Semester 2</option><option>M.Sc.</option></select></div>
+<div class="field"><label for="j-email">Email</label><input id="j-email" type="email" required placeholder="you@student.hstu.ac.bd"></div>
+</div>
+<fieldset style="margin:0;padding:0;border:0"><legend class="m mu" style="margin-bottom:12px">Wings you’re interested in (pick up to two)</legend>
+<div class="chips" id="wings">
+<input class="check" type="checkbox" id="w1" value="Robotics"><label class="chip" for="w1">Robotics</label>
+<input class="check" type="checkbox" id="w2" value="Power & Energy"><label class="chip" for="w2">Power &amp; Energy</label>
+<input class="check" type="checkbox" id="w3" value="Embedded & IoT"><label class="chip" for="w3">Embedded &amp; IoT</label>
+<input class="check" type="checkbox" id="w4" value="VLSI"><label class="chip" for="w4">VLSI</label>
+<input class="check" type="checkbox" id="w5" value="Signal & Comms"><label class="chip" for="w5">Signal &amp; Comms</label>
+<input class="check" type="checkbox" id="w6" value="Research & Career"><label class="chip" for="w6">Research &amp; Career</label>
+</div></fieldset>
+<div class="field"><label for="j-why">What do you want to build?</label><textarea id="j-why" placeholder="A self-balancing robot, a smart meter, a radio telescope…"></textarea></div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px"><span class="m mu">Fee is collected at orientation</span><button class="btn" type="submit">Submit application</button></div>
+<p class="m" id="j-err" role="alert" style="margin:0;min-height:16px;color:#FF5A1F"></p>
+</form>
+<div class="done" id="jdone" role="status">
+<div style="width:96px;height:96px;margin:0 auto;border-radius:999px;background:#D7FF3D;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#08090B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+<div class="s" style="margin-top:24px;font-size:56px;line-height:1">You’re plugged in.</div>
+<p class="mu" id="j-sum" style="margin:16px auto 0;max-width:420px;line-height:1.6"></p>
+<div style="margin-top:28px"><a class="btn ghost" href="events.html">See upcoming events</a></div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('#wings .check');
+  boxes.forEach(function (b) {
+    b.addEventListener('change', function () {
+      var n = document.querySelectorAll('#wings .check:checked').length;
+      boxes.forEach(function (x) { if (!x.checked) x.disabled = n >= 2; });
+    });
+  });
+  document.getElementById('jform').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, err = document.getElementById('j-err');
+    var name = f['j-name'].value.trim();
+    if (!name || !f['j-id'].value.trim() || !/.+@.+\..+/.test(f['j-email'].value)) { err.textContent = 'Please fill in your name, student ID and a valid email.'; return; }
+    var wings = Array.prototype.map.call(document.querySelectorAll('#wings .check:checked'), function (x) { return x.value; });
+    document.getElementById('j-sum').textContent = 'Thanks, ' + name.split(' ')[0] + '. Your member ID is M-2026-' + String(100 + Math.floor(Math.random() * 900)) + (wings.length ? '. We’ll introduce you to the ' + wings.join(' and ') + ' wing' + (wings.length > 1 ? 's' : '') : '') + ' at orientation on 5 December. (Demo — nothing was submitted.)';
+    f.hidden = true; document.getElementById('jdone').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
