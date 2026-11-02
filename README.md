@@ -2,7 +2,7 @@
 
 Homepage concept for the Electrical & Electronic Engineering Club at Hajee Mohammad Danesh Science & Technology University (HSTU), Dinajpur.
 
-**Live:** https://princekhan7748.github.io/eee-club-hstu/
+**Live:** http://hsturs.me/eee-club-hstu/
 
 ## What's here
 
