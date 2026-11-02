@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EEE Club of HSTU</title>
+<meta name="description" content="The student engineering club of HSTU's Department of Electrical & Electronic Engineering.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23D7FF3D'/%3E%3Cpath d='M17.5 4L7 18h8.5l-1.5 10L25 14h-8.5l1-10z' fill='%2308090B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#08090B;color:#F3F2EE;font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#D7FF3D}a:hover{color:#F3F2EE}
+.m{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.s{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
+.wrap{max-width:1360px;margin:0 auto;padding-left:40px;padding-right:40px}
+.navlink{color:#F3F2EE;text-decoration:none;padding:10px 18px;border-radius:999px;font-size:15px;transition:background .2s,color .2s}
+.navlink:hover{background:#F3F2EE;color:#08090B}
+.wing{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,background .35s}
+.wing:hover{transform:translateY(-8px);border-color:#D7FF3D}
+.row{transition:background .25s,padding .25s}
+.row:hover{background:#111317;padding-left:20px !important;color:#F3F2EE}
+.row:hover .arrow{background:#D7FF3D;border-color:#D7FF3D}
+.row:hover .arrow svg{stroke:#08090B}
+.story:hover .ph{transform:scale(1.02)}
+.ph{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee{display:flex;width:max-content;animation:marquee 28s linear infinite}
+@keyframes floatA{0%,100%{transform:perspective(900px) rotateY(-22deg) rotateX(8deg) translateY(0)}50%{transform:perspective(900px) rotateY(-14deg) rotateX(4deg) translateY(-14px)}}
+@keyframes floatB{0%,100%{transform:perspective(900px) rotateY(20deg) rotateX(-6deg) translateY(0)}50%{transform:perspective(900px) rotateY(12deg) rotateX(-2deg) translateY(12px)}}
+.floatA{animation:floatA 7s ease-in-out infinite}
+.floatB{animation:floatB 8s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.blink{animation:blink 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.marquee,.floatA,.floatB,.blink{animation:none}}
+@media (max-width: 900px){.links,.hide-sm{display:none !important}.wrap{padding-left:20px;padding-right:20px}}
+</style>
+</head>
+<body id="top">
+<div style="width: 100%; overflow-x: hidden">
+
+<section id="hero" aria-label="Hero" style="position: relative; min-height: 900px; overflow: hidden; background: #08090B">
+<canvas id="hero-canvas" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"></canvas>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 260px; background: linear-gradient(180deg, rgba(8,9,11,0) 0%, rgba(8,9,11,0.92) 100%)"></div>
+
+<div class="wrap" style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; color: #F3F2EE; text-decoration: none">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #D7FF3D; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="#08090B"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 500">EEE Club</span><span class="m" style="font-size: 10px; color: #8A8F98">HSTU · Dinajpur</span></span>
+</a>
+<nav class="links" aria-label="Main" style="display: flex; gap: 4px; padding: 6px; border-radius: 999px; background: rgba(17,19,23,0.7); border: 1px solid #262A31; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px)">
+<a class="navlink" href="#top" style="background: #F3F2EE; color: #08090B">Home</a>
+<a class="navlink" href="#about">About</a>
+<a class="navlink" href="#events">Events</a>
+<a class="navlink" href="#stories">Content</a>
+<a class="navlink" href="#verify">Verify</a>
+<a class="navlink" href="#contact">Contact</a>
+</nav>
+<a href="#join" style="display: flex; align-items: center; gap: 14px; padding: 6px 6px 6px 22px; border-radius: 999px; background: #D7FF3D; color: #08090B; font-size: 15px; font-weight: 500; text-decoration: none">Join us<span style="width: 40px; height: 40px; border-radius: 999px; background: #08090B; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D7FF3D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span></a>
+</div>
+
+<div class="wrap" style="position: relative; display: flex; justify-content: space-between; gap: 24px; padding-top: 36px">
+<span class="m" style="color: #8A8F98">[ 001 ] Electrical &amp; Electronic Engineering Club</span>
+<span class="m hide-sm" style="color: #8A8F98">25.6971° N · 88.6544° E</span>
+</div>
+
+<div class="floatA hide-sm" aria-hidden="true" style="position: absolute; right: 6%; top: 210px; padding: 14px 18px; border-radius: 16px; background: rgba(17,19,23,0.55); border: 1px solid rgba(243,242,238,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px)">
+<div style="display: flex; align-items: center; gap: 8px"><span class="blink" style="width: 8px; height: 8px; border-radius: 999px; background: #FF5A1F"></span><span class="m" style="font-size: 10px">Live · toroid L1</span></div>
+<div style="margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 22px; letter-spacing: -0.5px">4.7 <span style="color: #8A8F98; font-size: 14px">mH</span></div>
+<div class="m" style="margin-top: 4px; font-size: 10px; color: #8A8F98">28 turns · 50 Hz</div>
+</div>
+<div class="floatB hide-sm" aria-hidden="true" style="position: absolute; right: 30%; top: 520px; padding: 12px 16px; border-radius: 14px; background: rgba(17,19,23,0.55); border: 1px solid rgba(243,242,238,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px)">
+<div style="display: flex; gap: 14px; align-items: center"><span style="width: 18px; height: 3px; background: #D7FF3D"></span><span class="m" style="font-size: 10px">I(t)</span><span style="width: 18px; height: 3px; background: #4D6BFF"></span><span class="m" style="font-size: 10px">B-field</span></div>
+</div>
+
+<div class="wrap" style="position: relative; padding-top: 120px; padding-bottom: 48px">
+<div class="s" style="font-size: clamp(64px, 11vw, 190px); line-height: 0.9; letter-spacing: -0.02em">We are</div>
+<h1 style="margin: 0; font-size: clamp(72px, 15vw, 236px); line-height: 0.84; font-weight: 700; letter-spacing: -0.045em">the current<span style="color: #D7FF3D">.</span></h1>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; margin-top: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#join" style="display: flex; align-items: center; gap: 18px; padding: 8px 8px 8px 28px; border-radius: 999px; background: #D7FF3D; color: #08090B; font-size: 16px; font-weight: 500; text-decoration: none">Join the club<span style="width: 46px; height: 46px; border-radius: 999px; background: #08090B; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D7FF3D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span></a>
+<a href="#events" style="display: flex; align-items: center; gap: 18px; padding: 8px 8px 8px 28px; border-radius: 999px; border: 1px solid rgba(243,242,238,0.3); color: #F3F2EE; font-size: 16px; font-weight: 500; text-decoration: none; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">See what’s on<span style="width: 46px; height: 46px; border-radius: 999px; background: #F3F2EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08090B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span></a>
+</div>
+<p style="margin: 0; max-width: 400px; font-size: 18px; line-height: 1.55; color: #B9BDC4">The student engineering club of HSTU’s EEE department. We build robots, grids, chips and radios — and the people who make them.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(243,242,238,0.12)">
+<span style="display: flex; align-items: center; gap: 12px"><span class="blink" style="width: 8px; height: 8px; border-radius: 999px; background: #D7FF3D; box-shadow: 0 0 12px #D7FF3D"></span><span class="m" style="color: #8A8F98">Next up</span><span style="font-size: 15px">Embedded Bootcamp — [date]</span></span>
+<span class="m" style="color: #8A8F98">Move your cursor · scroll ↓</span>
+</div>
+</div>
+</section>
+
+<div aria-hidden="true" style="background: #D7FF3D; color: #08090B; overflow: hidden; padding: 22px 0">
+<div class="marquee" style="font-size: 72px; font-weight: 700; letter-spacing: -2.5px; white-space: nowrap; line-height: 1">
+<span style="padding-right: 48px">Measure ⚡ Design ⚡ Build ⚡ Ship it ⚡ Measure ⚡ Design ⚡ Build ⚡ Ship it ⚡</span>
+<span style="padding-right: 48px">Measure ⚡ Design ⚡ Build ⚡ Ship it ⚡ Measure ⚡ Design ⚡ Build ⚡ Ship it ⚡</span>
+</div>
+</div>
+
+<section id="about" class="wrap" style="padding-top: 140px; padding-bottom: 120px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 0 0 260px" class="m"><span style="color: #D7FF3D">(01) — Who we are</span></div>
+<p style="flex: 1 1 560px; margin: 0; font-size: clamp(32px, 4.2vw, 60px); line-height: 1.06; font-weight: 500; letter-spacing: -0.03em">Coursework teaches the theory. We add the bench time, the mentors and the deadlines that turn it into <span class="s" style="color: #D7FF3D">working hardware.</span></p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 96px; border-top: 1px solid #262A31; border-bottom: 1px solid #262A31">
+<div style="padding: 36px 24px 36px 0"><div class="m" style="color: #8A8F98">Ω-01</div><div style="margin-top: 12px; font-size: 104px; font-weight: 700; letter-spacing: -0.05em; line-height: 1">[600]<span style="color: #D7FF3D">+</span></div><div style="margin-top: 10px; font-size: 17px; color: #8A8F98">Active members</div></div>
+<div style="padding: 36px 24px; border-left: 1px solid #262A31"><div class="m" style="color: #8A8F98">Ω-02</div><div style="margin-top: 12px; font-size: 104px; font-weight: 700; letter-spacing: -0.05em; line-height: 1">[48]</div><div style="margin-top: 10px; font-size: 17px; color: #8A8F98">Projects shipped</div></div>
+<div style="padding: 36px 24px; border-left: 1px solid #262A31"><div class="m" style="color: #8A8F98">Ω-03</div><div style="margin-top: 12px; font-size: 104px; font-weight: 700; letter-spacing: -0.05em; line-height: 1">[12]</div><div style="margin-top: 10px; font-size: 17px; color: #8A8F98">Years running</div></div>
+<div style="padding: 36px 24px; border-left: 1px solid #262A31"><div class="m" style="color: #8A8F98">Ω-04</div><div style="margin-top: 12px; font-size: 104px; font-weight: 700; letter-spacing: -0.05em; line-height: 1">[35]<span style="color: #D7FF3D">+</span></div><div style="margin-top: 10px; font-size: 17px; color: #8A8F98">Events a year</div></div>
+</div>
+</section>
+
+<section style="background: #111317; padding: 140px 0">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+<div><div class="m" style="color: #D7FF3D">(02) — Wings</div><div style="margin-top: 24px; font-size: clamp(56px, 7vw, 104px); line-height: 0.92; font-weight: 500; letter-spacing: -0.04em">Six wings.<br><span class="s">One circuit.</span></div></div>
+<p style="margin: 0; max-width: 380px; font-size: 18px; line-height: 1.55; color: #8A8F98">Every member plugs into a wing — a focused team with its own mentors, lab hours and build season.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px; margin-top: 72px">
+<a href="#about" class="wing" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; padding: 32px; border-radius: 24px; background: #08090B; border: 1px solid #262A31; color: #F3F2EE; text-decoration: none">
+<span style="display: flex; justify-content: space-between; align-items: center"><span class="m" style="color: #8A8F98">W—01</span><span style="width: 64px; height: 64px; border-radius: 999px; background: #181B21; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="2"></rect><path d="M12 8V4M9 14h.01M15 14h.01"></path></svg></span></span>
+<span><span style="display: block; font-size: 34px; font-weight: 500; letter-spacing: -0.03em">Robotics &amp; Automation</span><span style="display: block; margin-top: 12px; font-size: 16px; line-height: 1.55; color: #8A8F98">Line-followers, robotic arms and competition bots built from scratch.</span></span>
+</a>
+<a href="#about" class="wing" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; padding: 32px; border-radius: 24px; background: #08090B; border: 1px solid #262A31; color: #F3F2EE; text-decoration: none">
+<span style="display: flex; justify-content: space-between; align-items: center"><span class="m" style="color: #8A8F98">W—02</span><span style="width: 64px; height: 64px; border-radius: 999px; background: #181B21; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg></span></span>
+<span><span style="display: block; font-size: 34px; font-weight: 500; letter-spacing: -0.03em">Power &amp; Energy</span><span style="display: block; margin-top: 12px; font-size: 16px; line-height: 1.55; color: #8A8F98">Solar micro-grids, smart metering and the future of the national grid.</span></span>
+</a>
+<a href="#about" class="wing" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; padding: 32px; border-radius: 24px; background: #D7FF3D; border: 1px solid #D7FF3D; color: #08090B; text-decoration: none">
+<span style="display: flex; justify-content: space-between; align-items: center"><span class="m">W—03</span><span style="width: 64px; height: 64px; border-radius: 999px; background: #08090B; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D7FF3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1"></rect><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"></path></svg></span></span>
+<span><span style="display: block; font-size: 34px; font-weight: 500; letter-spacing: -0.03em">Embedded &amp; IoT</span><span style="display: block; margin-top: 12px; font-size: 16px; line-height: 1.55; color: #2A2E12">From bare-metal C on ARM to connected sensor networks on the edge.</span></span>
+</a>
+<a href="#about" class="wing" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; padding: 32px; border-radius: 24px; background: #08090B; border: 1px solid #262A31; color: #F3F2EE; text-decoration: none">
+<span style="display: flex; justify-content: space-between; align-items: center"><span class="m" style="color: #8A8F98">W—04</span><span style="width: 64px; height: 64px; border-radius: 999px; background: #181B21; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M3 15h18M9 3v18M15 3v18"></path></svg></span></span>
+<span><span style="display: block; font-size: 34px; font-weight: 500; letter-spacing: -0.03em">VLSI &amp; Electronics</span><span style="display: block; margin-top: 12px; font-size: 16px; line-height: 1.55; color: #8A8F98">Analog design, PCB layout and digital logic down to the transistor.</span></span>
+</a>
+<a href="#about" class="wing" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; padding: 32px; border-radius: 24px; background: #08090B; border: 1px solid #262A31; color: #F3F2EE; text-decoration: none">
+<span style="display: flex; justify-content: space-between; align-items: center"><span class="m" style="color: #8A8F98">W—05</span><span style="width: 64px; height: 64px; border-radius: 999px; background: #181B21; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"></circle><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19.1 4.9a10 10 0 0 1 0 14.2M4.9 19.1a10 10 0 0 1 0-14.2"></path></svg></span></span>
+<span><span style="display: block; font-size: 34px; font-weight: 500; letter-spacing: -0.03em">Signal &amp; Comms</span><span style="display: block; margin-top: 12px; font-size: 16px; line-height: 1.55; color: #8A8F98">DSP, RF, antennas and software-defined radio experiments.</span></span>
+</a>
+<a href="#about" class="wing" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; padding: 32px; border-radius: 24px; background: #08090B; border: 1px solid #262A31; color: #F3F2EE; text-decoration: none">
+<span style="display: flex; justify-content: space-between; align-items: center"><span class="m" style="color: #8A8F98">W—06</span><span style="width: 64px; height: 64px; border-radius: 999px; background: #181B21; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4 20h16L14 9V3"></path><path d="M7 15h10"></path></svg></span></span>
+<span><span style="display: block; font-size: 34px; font-weight: 500; letter-spacing: -0.03em">Research &amp; Career</span><span style="display: block; margin-top: 12px; font-size: 16px; line-height: 1.55; color: #8A8F98">Paper-writing clinics, alumni mentoring and industry placements.</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<section id="events" class="wrap" style="padding-top: 140px; padding-bottom: 120px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+<div><div class="m" style="color: #D7FF3D">(03) — Upcoming</div><div style="margin-top: 24px; font-size: clamp(56px, 7vw, 104px); line-height: 0.92; font-weight: 500; letter-spacing: -0.04em">What’s charging<br><span class="s">next.</span></div></div>
+<a href="#events" style="display: flex; align-items: center; gap: 14px; padding: 6px 6px 6px 22px; border-radius: 999px; border: 1px solid #3A3F48; color: #F3F2EE; font-size: 15px; text-decoration: none">Full calendar<span style="width: 40px; height: 40px; border-radius: 999px; background: #D7FF3D; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#08090B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span></a>
+</div>
+<div style="margin-top: 64px; border-bottom: 1px solid #262A31">
+<a href="#events" class="row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px; padding: 32px 0; border-top: 1px solid #262A31; color: #F3F2EE; text-decoration: none; border-radius: 20px">
+<span style="width: 150px"><span style="display: block; font-size: 72px; font-weight: 500; letter-spacing: -0.04em; line-height: 1">14</span><span class="m" style="color: #8A8F98">Nov · Fri</span></span>
+<span style="flex: 1 1 360px"><span style="display: block; font-size: 32px; font-weight: 500; letter-spacing: -0.02em">Arduino to ARM: Embedded Bootcamp</span><span class="m" style="display: inline-block; margin-top: 12px; padding: 7px 12px; border: 1px solid #3A3F48; border-radius: 999px">● Workshop</span></span>
+<span class="m hide-sm" style="color: #8A8F98; width: 220px; line-height: 1.6">Room 310, EEE Building<br>10:00 — 16:00</span>
+<span class="arrow" style="width: 64px; height: 64px; border-radius: 999px; border: 1px solid #3A3F48; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span>
+</a>
+<a href="#events" class="row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px; padding: 32px 0; border-top: 1px solid #262A31; color: #F3F2EE; text-decoration: none; border-radius: 20px">
+<span style="width: 150px"><span style="display: block; font-size: 72px; font-weight: 500; letter-spacing: -0.04em; line-height: 1">22</span><span class="m" style="color: #8A8F98">Nov · Sat</span></span>
+<span style="flex: 1 1 360px"><span style="display: block; font-size: 32px; font-weight: 500; letter-spacing: -0.02em">Volt Rush — Inter-University Robotics Sprint</span><span class="m" style="display: inline-block; margin-top: 12px; padding: 7px 12px; border-radius: 999px; background: #D7FF3D; color: #08090B">● Competition</span></span>
+<span class="m hide-sm" style="color: #8A8F98; width: 220px; line-height: 1.6">Central Field, HSTU<br>09:00 — 18:00</span>
+<span class="arrow" style="width: 64px; height: 64px; border-radius: 999px; border: 1px solid #3A3F48; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span>
+</a>
+<a href="#events" class="row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px; padding: 32px 0; border-top: 1px solid #262A31; color: #F3F2EE; text-decoration: none; border-radius: 20px">
+<span style="width: 150px"><span style="display: block; font-size: 72px; font-weight: 500; letter-spacing: -0.04em; line-height: 1">03</span><span class="m" style="color: #8A8F98">Dec · Wed</span></span>
+<span style="flex: 1 1 360px"><span style="display: block; font-size: 32px; font-weight: 500; letter-spacing: -0.02em">Grid of Tomorrow: Talk with Power Sector Engineers</span><span class="m" style="display: inline-block; margin-top: 12px; padding: 7px 12px; border: 1px solid #3A3F48; border-radius: 999px">● Seminar</span></span>
+<span class="m hide-sm" style="color: #8A8F98; width: 220px; line-height: 1.6">TSC Auditorium<br>15:00 — 17:00</span>
+<span class="arrow" style="width: 64px; height: 64px; border-radius: 999px; border: 1px solid #3A3F48; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F2EE" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span>
+</a>
+</div>
+<div class="m" style="margin-top: 16px; color: #8A8F98">Event dates are placeholders</div>
+</section>
+
+<section id="stories" class="wrap" style="padding-top: 40px; padding-bottom: 140px">
+<div class="m" style="color: #D7FF3D">(04) — Stories</div>
+<div style="margin-top: 24px; font-size: clamp(56px, 7vw, 104px); line-height: 0.92; font-weight: 500; letter-spacing: -0.04em">Fresh from <span class="s">the lab.</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px; margin-top: 64px">
+<a href="#stories" class="story" style="display: block; color: #F3F2EE; text-decoration: none">
+<span style="display: block; overflow: hidden; border-radius: 20px"><span class="ph" style="display: flex; align-items: center; justify-content: center; height: 300px; background-color: #111317; background-image: repeating-linear-gradient(90deg, rgba(243,242,238,0.04) 0 1px, transparent 1px 32px), repeating-linear-gradient(0deg, rgba(243,242,238,0.04) 0 1px, transparent 1px 32px)"><span class="m" style="color: #8A8F98">[ photo · solar micro-grid ]</span></span></span>
+<span class="m" style="display: block; margin-top: 18px; color: #D7FF3D">Research · 8 min</span>
+<span style="display: block; margin-top: 8px; font-size: 24px; line-height: 1.25; font-weight: 500">How our solar micro-grid team powered a village school</span>
+</a>
+<a href="#stories" class="story" style="display: block; color: #F3F2EE; text-decoration: none">
+<span style="display: block; overflow: hidden; border-radius: 20px"><span class="ph" style="display: flex; align-items: center; justify-content: center; height: 300px; background: #181B21"><span class="m" style="color: #8A8F98">[ photo · Volt Rush ]</span></span></span>
+<span class="m" style="display: block; margin-top: 18px; color: #D7FF3D">Event recap · 5 min</span>
+<span style="display: block; margin-top: 8px; font-size: 24px; line-height: 1.25; font-weight: 500">Inside Volt Rush: one weekend, a field full of robots</span>
+</a>
+<a href="#stories" class="story" style="display: block; color: #F3F2EE; text-decoration: none">
+<span style="display: block; overflow: hidden; border-radius: 20px"><span class="ph" style="display: flex; align-items: center; justify-content: center; height: 300px; background-color: #111317; background-image: repeating-linear-gradient(90deg, rgba(243,242,238,0.04) 0 1px, transparent 1px 32px), repeating-linear-gradient(0deg, rgba(243,242,238,0.04) 0 1px, transparent 1px 32px)"><span class="m" style="color: #8A8F98">[ photo · alumni ]</span></span></span>
+<span class="m" style="display: block; margin-top: 18px; color: #D7FF3D">Alumni · 6 min</span>
+<span style="display: block; margin-top: 8px; font-size: 24px; line-height: 1.25; font-weight: 500">From EEE Club to silicon: alumni at the chip frontier</span>
+</a>
+</div>
+</section>
+
+<section id="join" style="background: #D7FF3D; color: #08090B; border-radius: 48px 48px 0 0">
+<div class="wrap" style="padding-top: 72px; padding-bottom: 88px">
+<div class="m">(05) — Membership [2026/27] · Applications open</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 48px; margin-top: 24px">
+<div style="font-size: clamp(120px, 20vw, 300px); line-height: 0.82; font-weight: 700; letter-spacing: -0.06em">Plug <span class="s" style="letter-spacing: -0.02em">in.</span></div>
+<div style="flex: 0 1 440px">
+<div style="display: flex; gap: 24px; padding: 22px 0; border-top: 1px solid rgba(8,9,11,0.25)"><span class="m">01</span><span><span style="display: block; font-size: 24px; font-weight: 500">Apply online</span><span style="display: block; margin-top: 6px; font-size: 16px; color: #2A2E12">Two minutes. Tell us what you want to build.</span></span></div>
+<div style="display: flex; gap: 24px; padding: 22px 0; border-top: 1px solid rgba(8,9,11,0.25)"><span class="m">02</span><span><span style="display: block; font-size: 24px; font-weight: 500">Orientation</span><span style="display: block; margin-top: 6px; font-size: 16px; color: #2A2E12">Meet your wing, mentors and the lab crew.</span></span></div>
+<div style="display: flex; gap: 24px; padding: 22px 0; border-top: 1px solid rgba(8,9,11,0.25)"><span class="m">03</span><span><span style="display: block; font-size: 24px; font-weight: 500">Ship something</span><span style="display: block; margin-top: 6px; font-size: 16px; color: #2A2E12">Your first project goes live within 30 days.</span></span></div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 48px">
+<a href="#join" style="display: flex; align-items: center; gap: 18px; padding: 8px 8px 8px 28px; border-radius: 999px; background: #08090B; color: #D7FF3D; font-size: 16px; font-weight: 500; text-decoration: none">Become a member<span style="width: 46px; height: 46px; border-radius: 999px; background: #D7FF3D; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08090B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></span></a>
+<a id="verify" href="#verify" class="m" style="color: #08090B">Already a member? Verify your certificate →</a>
+</div>
+</div>
+</section>
+
+<footer id="contact" style="background: #08090B; padding-top: 96px; overflow: hidden">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; gap: 64px; justify-content: space-between">
+<div style="flex: 0 1 440px">
+<div style="font-size: 44px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.05">Get the monthly Pulse.</div>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.55; color: #8A8F98">Events, opportunities and lab notes — one email a month.</p>
+<label for="dh-email" class="m" style="display: block; margin-top: 24px; color: #8A8F98">Email</label>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 8px; padding: 6px 6px 6px 22px; border-radius: 999px; background: #111317; border: 1px solid #262A31">
+<input id="dh-email" type="email" placeholder="you@student.hstu.ac.bd" style="flex: 1; min-width: 0; background: transparent; border: 0; color: #F3F2EE; font: inherit; font-size: 16px; outline: none">
+<button type="button" aria-label="Subscribe" style="width: 48px; height: 48px; border: 0; border-radius: 999px; background: #D7FF3D; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08090B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"></path></svg></button>
+</div>
+</div>
+<div style="flex: 1 1 520px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px"><span class="m" style="color: #D7FF3D">About</span><a href="#about" style="color: #F3F2EE; text-decoration: none">Our story</a><a href="#about" style="color: #F3F2EE; text-decoration: none">History</a><a href="#about" style="color: #F3F2EE; text-decoration: none">Leadership</a><a href="#about" style="color: #F3F2EE; text-decoration: none">Constitution</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px"><span class="m" style="color: #D7FF3D">Happenings</span><a href="#events" style="color: #F3F2EE; text-decoration: none">Upcoming</a><a href="#events" style="color: #F3F2EE; text-decoration: none">Archive</a><a href="#events" style="color: #F3F2EE; text-decoration: none">Notices</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px"><span class="m" style="color: #D7FF3D">Content</span><a href="#stories" style="color: #F3F2EE; text-decoration: none">Blog</a><a href="#stories" style="color: #F3F2EE; text-decoration: none">Pulse magazine</a><a href="#stories" style="color: #F3F2EE; text-decoration: none">Resources</a><a href="#stories" style="color: #F3F2EE; text-decoration: none">Gallery</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px"><span class="m" style="color: #D7FF3D">Contact</span><span>Dept. of EEE, HSTU<br>Dinajpur 5200</span><span style="color: #8A8F98">[club email]</span><span style="color: #8A8F98">[phone]</span></div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 72px; padding-top: 24px; border-top: 1px solid #262A31">
+<div class="m" style="display: flex; flex-wrap: wrap; gap: 24px"><a href="https://facebook.com">Facebook ↗</a><a href="https://instagram.com">Instagram ↗</a><a href="https://linkedin.com">LinkedIn ↗</a><a href="https://youtube.com">YouTube ↗</a></div>
+<span class="m" style="color: #8A8F98">© 2026 EEE Club of HSTU · Privacy · Terms</span>
+</div>
+</div>
+<div aria-hidden="true" style="margin-top: 40px; text-align: center; font-size: 22vw; line-height: 0.78; font-weight: 700; letter-spacing: -0.06em; color: #15181D; white-space: nowrap; height: 17vw; overflow: hidden">EEE CLUB</div>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var hero = document.getElementById('hero');
+  var c = document.getElementById('hero-canvas');
+  if (!hero || !c || !c.getContext) return;
+  var ctx = c.getContext('2d');
+  var W = 0, H = 0;
+  var tx = 0, ty = 0, cx = 0, cy = 0;
+  var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var visible = true;
+
+  hero.addEventListener('mousemove', function (e) {
+    var r = hero.getBoundingClientRect();
+    tx = (e.clientX - r.left) / r.width - 0.5;
+    ty = (e.clientY - r.top) / r.height - 0.5;
+  });
+  hero.addEventListener('mouseleave', function () { tx = 0; ty = 0; });
+
+  // toroidal inductor: a helix wound around a torus
+  var R = 1, r = 0.34, turns = 28, N = 2800, coil = [];
+  for (var i = 0; i < N; i++) {
+    var u = (i / N) * Math.PI * 2, v = u * turns;
+    coil.push([(R + r * Math.cos(v)) * Math.cos(u), (R + r * Math.cos(v)) * Math.sin(u), r * Math.sin(v), i / N]);
+  }
+  var COLS = 84, ROWS = 34;
+  var VO = [215, 255, 61], AR = [77, 107, 255], INK = [243, 242, 238];
+  function mix(a, b, k) { return [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k]; }
+  function rgba(col, a) { return 'rgba(' + (col[0] | 0) + ',' + (col[1] | 0) + ',' + (col[2] | 0) + ',' + a.toFixed(3) + ')'; }
+
+  function fit() {
+    var d = Math.min(window.devicePixelRatio || 1, 2);
+    W = hero.clientWidth; H = hero.clientHeight;
+    c.width = Math.max(1, Math.round(W * d));
+    c.height = Math.max(1, Math.round(H * d));
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+    if (reduce) draw(2.4);
+  }
+
+  function draw(t) {
+    if (!W || !H) return;
+    cx += (tx - cx) * 0.05;
+    cy += (ty - cy) * 0.05;
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+    var narrow = W < 900;
+
+    // sine-wave field rolling toward the viewer
+    var horizon = H * (narrow ? 0.5 : 0.46) + cy * 40;
+    var f = W * 0.5, camH = 1.35, pan = cx * 0.9;
+    for (var j = 0; j < ROWS; j++) {
+      var z = 1.6 + (j / (ROWS - 1)) * 8;
+      var s = f / z;
+      var fade = Math.max(0, 1.15 - z / 9.6);
+      for (var i = 0; i < COLS; i++) {
+        var x = (i / (COLS - 1) - 0.5) * 14;
+        var y = 0.34 * Math.sin(x * 0.9 + t * 1.3) * Math.cos(z * 0.75 - t * 0.9) + 0.1 * Math.sin(x * 2.6 - t * 2.1 + z);
+        var px = W / 2 + (x - pan) * s, py = horizon + (camH - y) * s;
+        if (px < -10 || px > W + 10 || py > H + 10) continue;
+        var k = Math.min(1, Math.max(0, (y + 0.42) / 0.84));
+        var sz = Math.max(0.7, s * 0.016);
+        ctx.fillStyle = rgba(mix(AR, VO, k), fade * (0.35 + 0.55 * k));
+        ctx.fillRect(px - sz / 2, py - sz / 2, sz, sz);
+      }
+    }
+
+    // the toroid
+    var ox = narrow ? W * 0.5 : W * 0.7, oy = narrow ? H * 0.3 : H * 0.4;
+    var k0 = Math.min(W, H) * (narrow ? 0.24 : 0.3);
+    var spin = t * 0.18;
+    var ax = 1.12 + cy * 0.5 + Math.sin(t * 0.4) * 0.1, ay = 0.25 + cx * 0.9 + Math.sin(t * 0.27) * 0.12;
+    var cz = Math.cos(spin), sz0 = Math.sin(spin), ca = Math.cos(ax), sa = Math.sin(ax), cb = Math.cos(ay), sb = Math.sin(ay);
+    var head1 = (t * 0.07) % 1, head2 = (head1 + 0.5) % 1;
+    for (var n = 0; n < coil.length; n++) {
+      var p = coil[n];
+      var x1 = p[0] * cz - p[1] * sz0, y1 = p[0] * sz0 + p[1] * cz, z1 = p[2];
+      var y2 = y1 * ca - z1 * sa, z2 = y1 * sa + z1 * ca;
+      var x3 = x1 * cb + z2 * sb, z3 = -x1 * sb + z2 * cb;
+      var d = 3.4 + z3, s2 = (k0 * 3.4) / d;
+      var g1 = Math.abs(p[3] - head1); g1 = Math.min(g1, 1 - g1);
+      var g2 = Math.abs(p[3] - head2); g2 = Math.min(g2, 1 - g2);
+      var glow = Math.exp(-g1 * g1 * 700) + Math.exp(-g2 * g2 * 700);
+      var depth = Math.min(1, Math.max(0, 1 - (z3 + 1.4) / 2.8));
+      var col = mix(mix(AR, INK, depth * 0.6), VO, Math.min(1, glow));
+      var size = (1.1 + glow * 2.2) * (3.4 / d);
+      ctx.fillStyle = rgba(col, Math.min(1, 0.22 + 0.5 * depth + glow * 0.9));
+      ctx.fillRect(ox + x3 * s2 - size / 2, oy + y2 * s2 - size / 2, size, size);
+    }
+
+    // electrons racing around the core
+    for (var e = 0; e < 90; e++) {
+      var uu = (e / 90) * Math.PI * 2 + t * 1.1;
+      var ex = Math.cos(uu), ey = Math.sin(uu);
+      var ex1 = ex * cz - ey * sz0, ey1 = ex * sz0 + ey * cz;
+      var ey2 = ey1 * ca, ez2 = ey1 * sa;
+      var ex3 = ex1 * cb + ez2 * sb, ez3 = -ex1 * sb + ez2 * cb;
+      var ed = 3.4 + ez3, es = (k0 * 3.4) / ed;
+      var pulse = 0.5 + 0.5 * Math.sin(e * 0.7 + t * 6);
+      var esz = 2.2 * (3.4 / ed);
+      ctx.fillStyle = 'rgba(255,90,31,' + (0.35 + 0.5 * pulse).toFixed(3) + ')';
+      ctx.fillRect(ox + ex3 * es - esz / 2, oy + ey2 * es - esz / 2, esz, esz);
+    }
+    ctx.globalCompositeOperation = 'source-over';
+  }
+
+  fit();
+  window.addEventListener('resize', fit);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }).observe(hero);
+  }
+  if (reduce) { draw(2.4); return; }
+  var t0 = performance.now();
+  function loop(now) {
+    if (visible) draw((now - t0) / 1000);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
